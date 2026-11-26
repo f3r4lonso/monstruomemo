@@ -1,0 +1,30 @@
+<button
+  type="button"
+  class="pokemon-card"
+  [attr.data-type]="types?.[0]"
+  (click)="itemClick.emit(title)"
+>
+  <span class="content card-art">
+    @if (entryId) {
+      <span class="entry-id">#{{ entryId | number: '3.0-0' : 'en-US' }}</span>
+    }
+    @if (imgSrc && !imageFailed) {
+      <img [src]="imgSrc" alt="" (error)="imageFailed = true" />
+    } @else {
+      <span class="brand-icon missing-art" aria-hidden="true"></span>
+    }
+  </span>
+  <span class="card-body">
+    <span class="card-title-row">
+      <span class="footer card-title">{{ title }}</span>
+      <span class="card-arrow" aria-hidden="true">↗</span>
+    </span>
+    @if (types?.length) {
+      <span class="type-list">
+        @for (type of types; track type) {
+          <span class="type-chip" [attr.data-type]="type">{{ type }}</span>
+        }
+      </span>
+    }
+  </span>
+</button>

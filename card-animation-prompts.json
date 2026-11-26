@@ -1,0 +1,34 @@
+{
+  "project": "Monstruomemo",
+  "language": "en",
+  "tool": "Stable Diffusion + AnimateDiff or image-to-video",
+  "workflow": {
+    "image": "Combine basePrompt with each card's imagePrompt. Use negativePrompt in the negative field.",
+    "animation": "Use the generated image as the reference. Add animationPrompt and keep the first and last pose similar.",
+    "loopSeconds": [1.5, 2]
+  },
+  "basePrompt": "Children's Halloween memory game, friendly 2D storybook cartoon, bold rounded outlines, soft cel shading, simple readable silhouette, plum and lavender palette with warm amber accents, one centered subject, plain dark plum background, generous margins, fixed camera, no text, no frame.",
+  "negativePrompt": "photorealism, gore, blood, wounds, realistic firearms, horror realism, extra limbs, duplicate subject, clutter, watermark, letters, camera shake, zoom, strobe, flicker",
+  "cards": [
+    { "id": "vampire", "name": "Vampiro", "imagePrompt": "A sleepy little vampire with tiny fangs and an oversized plum cape, standing inside an open toy coffin.", "animationPrompt": "He yawns, lifts his cape halfway, then returns to his sleepy pose." },
+    { "id": "enchanted-stake", "name": "Estaca encantada", "imagePrompt": "A chunky wooden charm shaped like a stake, carved with a glowing golden sun rune.", "animationPrompt": "The rune pulses once and a warm ring of light expands and fades." },
+    { "id": "ghost", "name": "Fantasma", "imagePrompt": "A round lavender ghost with a wavy tail, rosy cheeks, and curious eyes.", "animationPrompt": "It floats up, blinks, and drifts back as its tail ripples." },
+    { "id": "glowing-cross", "name": "Cruz luminosa", "imagePrompt": "A rounded golden cross-shaped lantern with frosted glass and lavender trim.", "animationPrompt": "Warm light slowly blooms from its center, then dims." },
+    { "id": "werewolf", "name": "Hombre lobo", "imagePrompt": "A fluffy gray werewolf pup with oversized ears, a torn purple scarf, and a tiny full moon above.", "animationPrompt": "He tips his head up for a silent howl, then lowers it." },
+    { "id": "silver-bullet", "name": "Bala plateada", "imagePrompt": "A single stylized silver fantasy bullet engraved with a crescent moon, oversized rounded toy-like shape, no gun.", "animationPrompt": "It rocks gently as a silver glint travels across the engraving." },
+    { "id": "mummy", "name": "Momia", "imagePrompt": "A little mummy with big curious eyes, soft cream bandages, and one loose ribbon.", "animationPrompt": "She takes a tiny step, gets tangled, then bounces back upright." },
+    { "id": "magic-scissors", "name": "Tijeras mágicas", "imagePrompt": "A pair of chunky purple craft scissors with rounded tips and golden finger loops.", "animationPrompt": "They open and close once, releasing a tiny star-shaped sparkle." },
+    { "id": "dragon", "name": "Dragón", "imagePrompt": "A chubby coral-orange baby dragon with plum wings and a curled tail.", "animationPrompt": "He puffs his cheeks, breathes a tiny curl of flame, then blinks in surprise." },
+    { "id": "mirror-shield", "name": "Escudo espejo", "imagePrompt": "A round silver mirror shield with a lavender rim, gold studs, and a clearly reflective face.", "animationPrompt": "A tiny reflected flame sweeps across the mirror and vanishes in warm sparkles." },
+    { "id": "witch", "name": "Bruja", "imagePrompt": "A mischievous witch with a crooked violet hat, round glasses, and a star-tipped wand.", "animationPrompt": "She draws a spiral of lavender magic and brings the wand back to rest." },
+    { "id": "hourglass", "name": "Reloj de arena", "imagePrompt": "A brass hourglass with plum glass and glowing amber sand.", "animationPrompt": "The grains float upward from the lower chamber, then settle back into their starting position." },
+    { "id": "goblin", "name": "Duende", "imagePrompt": "A round moss-green goblin with huge ears, orange boots, and a mischievous grin.", "animationPrompt": "He twitches an ear, taps both feet in a tiny dance, then stands still again." },
+    { "id": "bell", "name": "Campana", "imagePrompt": "A little brass handbell tied with a purple ribbon.", "animationPrompt": "It swings gently from side to side while two soft rings of golden light spread and fade." },
+    { "id": "slime", "name": "Slime", "imagePrompt": "A lime-green jelly blob with small black eyes and two tiny bubbles inside.", "animationPrompt": "It squashes, stretches upward, and settles back into a round shape." },
+    { "id": "enchanted-salt", "name": "Sal encantada", "imagePrompt": "A squat lavender salt shaker crowned with a tiny golden star, with visible white crystals.", "animationPrompt": "It tips slightly, sprinkles a few sparkling grains, then returns upright." },
+    { "id": "skeleton", "name": "Esqueleto", "imagePrompt": "A friendly toy-like skeleton with a wide grin, rounded bones, and a purple bow tie.", "animationPrompt": "He wiggles so one arm slips loose, catches it, and snaps it back into place." },
+    { "id": "bouncy-bone", "name": "Hueso señuelo", "imagePrompt": "A chunky ivory cartoon bone wrapped in a bright orange ribbon.", "animationPrompt": "It bounces twice like a squeaky toy, with two tiny stars popping beside it, then settles." },
+    { "id": "potion", "name": "Poción de vida", "imagePrompt": "A round glass potion bottle filled with bright mint-green liquid, a cork, and an embossed heart.", "animationPrompt": "Bubbles rise and three small green hearts drift out and fade." },
+    { "id": "seer", "name": "Vidente", "imagePrompt": "A friendly fortune teller with a lavender headscarf cradling a crystal ball.", "animationPrompt": "Inside the ball, the silhouette of a face-down card appears, turns over, and dissolves into mist." }
+  ]
+}

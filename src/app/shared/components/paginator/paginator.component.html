@@ -1,0 +1,21 @@
+<nav class="pagination" aria-label="Pokémon pages">
+  <button
+    id="prevPageBtn"
+    type="button"
+    class="ui-button"
+    [disabled]="disabled || currentPage === 0"
+    (click)="prevClickHandler()"
+  >
+    <span aria-hidden="true">←</span> <span>Previous</span>
+  </button>
+  <p id="pageInfo" aria-live="polite">Page {{ currentPage + 1 }} of {{ totalPages }}</p>
+  <button
+    id="nextPageBtn"
+    type="button"
+    class="ui-button ui-button-primary"
+    [disabled]="disabled || currentPage >= totalPages - 1"
+    (click)="nextClickHandler()"
+  >
+    <span>Next</span> <span aria-hidden="true">→</span>
+  </button>
+</nav>

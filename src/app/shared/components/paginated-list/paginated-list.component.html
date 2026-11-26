@@ -1,0 +1,33 @@
+@if (isCurrentPageEmpty()) {
+  <div class="state-panel" role="status">
+    @if (loadError) {
+      <p>Couldn’t load Pokémon. Check your connection and try again.</p>
+      <button type="button" class="ui-button" (click)="lastPage.emit()">Try again</button>
+    } @else {
+      <span class="loading-dot" aria-hidden="true"></span> Loading Pokémon…
+    }
+  </div>
+} @else {
+  <div class="pokemon-grid">
+    @for (item of getPageItems(); track item) {
+      @if (item | async; as pokemon) {
+        <app-list-item
+          [title]="pokemon.name"
+          [imgSrc]="pokemon.imageUrl"
+          [entryId]="pokemon.id"
+          [types]="pokemon.types"
+          (itemClick)="itemClick.emit($event)"
+        />
+      } @else {
+        <div class="card-skeleton" aria-hidden="true"></div>
+      }
+    }
+  </div>
+}
+@if (!hidePaginator && totalPages) {
+  <app-paginator
+    [totalPages]="totalPages"
+    [disabled]="isCurrentPageEmpty()"
+    (pageChanged)="pageChangedHandler($event)"
+  />
+}
